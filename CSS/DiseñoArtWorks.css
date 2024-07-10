@@ -1,0 +1,222 @@
+
+.Alerta_WIP{
+    background-color: #e7900d;
+    color: #1b1b1b;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+body {
+    background-color: #3a3a3a;
+    color: #dddddd;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    vertical-align: center;
+}
+.Contenido_Grupo{
+    background-color: #1b1b1b;
+    box-shadow:0px 0px 20px #131313;
+    border-radius: 15px;
+    width: 80%;
+    padding: 3px;
+    padding-bottom: 3px;
+    margin: 10px auto;
+}
+.GR_Artkork_Big{
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto ;
+} 
+.GR_Artkork_Standar{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    margin: 0px ; 
+} 
+.Artwork_Video{
+    max-width: 100%;
+  
+}
+.Contenido_Programas{
+    background-color: #1b1b1b;
+    box-shadow:0px 0px 20px #131313;
+    border-radius: 15px;
+
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap;
+  
+    justify-content: center;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin: 10px auto ;
+    gap: 20px;
+}
+.Programa_1, .Programa_2, .Programa_3, .Programa_4,.Programa_5,.Programa_6,.Programa_7{
+    background-position: center;
+    background-repeat: none;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    border: 3px solid;
+    border-radius: 15px;
+    border-color: #3a3a3a;
+}
+.Programa_1{
+    background-image: url(Imagenes/maya.jpg);
+}
+.Programa_2{
+    background-image: url(Imagenes/ZBrush\ Icon.jpg);
+}
+.Programa_3{
+    background-image: url(Imagenes/substance.jpg);
+}
+.Programa_4{
+    background-image: url(Imagenes/Unity.jpg);
+}
+.Programa_5{
+    background-image: url(Imagenes/unreal\ 5.jpg);
+}
+.Programa_6{
+    background-image: url(Imagenes/marmoset.jpg);
+}
+.Programa_7{
+    background-image: url(Imagenes/arnold-icon-400px-social.png);
+}
+
+h1{
+    font-size: 45px;
+    max-height: max-content;
+    padding: 0px;
+    margin: 15px 0px 20px 0px; 
+    justify-content: center; 
+    text-align: center;
+}
+h2{
+    font-size: 20px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 18px;
+}
+img {
+    border: 3px solid;
+    border-radius: 15px;
+    border-color: #131313;
+}
+.AS{
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.clickable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#overlay img {
+    max-width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+  /* visited link */
+  a:visited {
+    color: rgb(180, 5, 250);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(3, 255, 66);
+  }
+  
+  .like-container{
+    background-color: #3a3a3a;
+    width:90px;
+    height: 50px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+   
+}
+.Like_Button{
+    background-image: url(Imagenes/LIke\ 2.jpg);
+    background-size: 148%;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border: 2px solid;
+    border-radius: 25px;
+    border-color: #1b1b1b;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+.Like_Button:hover{
+    background-image: url(Imagenes/LIke\ 1.jpg);
+    background-size: 148%;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+    padding: 0px;
+    border: 2px solid;
+    border-radius: 25px;
+    border-color: #1b1b1b;
+    cursor: pointer; 
+    
+}
+.Titiulo_Artwork{
+    background-color: #e7900d;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
