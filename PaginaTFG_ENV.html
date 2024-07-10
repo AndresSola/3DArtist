@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TFG - LIBRARY</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+
+  <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <h1>TFG - LIBRARY</h1>
+    <h2>aaaaaaaaaaaaaaaa</h2>
+    <section class="Contenido_Programas">
+      <div class="Programa_1"></div>
+      <div class="Programa_2"></div>
+      <div class="Programa_3"></div>
+      <div class="Programa_5"></div>
+   </section>
+ </section>
+ 
+ </section>
+   <section class="Contenido_Grupo">
+      <h3>EXTERIOR OF LIBRARY</h3>
+      <ul class="GR_Artkork_Standar">
+        <img src="CSS/Imagenes/SEC_MAIN_EXT.01003.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/SEC_MAIN_EXT.01310.png" alt="Imagen 1" class="clickable-image">
+      </ul>
+    </section >
+
+   <section class="Contenido_Grupo">
+      <h3>INTERIOR OF LIBRARY</h3>  
+      <ul class="GR_Artkork_Standar">
+        <img src="CSS/Imagenes/escenario 1.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/escenario Ren 1.jpg" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/escenario 2.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/escenario 2 ren.jpg" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/escenario 3.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/escenario 3 ren.jpg" alt="Imagen 1" class="clickable-image">
+      </ul>
+    </section >
+
+    <section class="Contenido_Grupo">
+      <h3>ENGINE ROOM RENDER 2</h3>
+      <ul class="GR_Artkork_Standar">
+        <img src="CSS/Imagenes/ren 1 (2).JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ren 2.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ren 3.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ren 4.JPG" alt="Imagen 1" class="clickable-image">
+      </ul>
+      <div id="overlay"></div>
+    </section >
+
+    <section class="Contenido_Grupo">
+      <h4>More about this proyect:
+        <a href="">TFG - PROPS</a>
+        or
+        <a href="">TFG - CHARACTER</a>
+      </h4>
+
+    </section>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+
+    </section>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.clickable-image');
+    const overlay = document.getElementById('overlay');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const clone = image.cloneNode();
+            overlay.innerHTML = '';
+            overlay.appendChild(clone);
+            overlay.style.display = 'flex';
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
+
+    </script>
+</body>
+</html>
