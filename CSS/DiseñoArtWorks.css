@@ -70,13 +70,13 @@ body {
     border-color: #3a3a3a;
 }
 .Programa_1{
-    background-image: url(CSS/Logos/maya.jpg);
+    background-image: url(Logos/maya.jpg);
 }
 .Programa_2{
     background-image: url(Logos/ZBrush\ Icon.jpg);
 }
 .Programa_3{
-    background-image: url(CSS/Logos/substance.jpg);
+    background-image: url(Logos/substance.jpg);
 }
 .Programa_4{
     background-image: url(Logos/Unity.jpg);
@@ -178,7 +178,7 @@ img {
    
 }
 .Like_Button{
-    background-image: url(CSS/Logos/LIke\ 2.jpg);
+    background-image: url(Logos/LIke\ 2.jpg);
     background-size: 148%;
     background-position: center;
     width: 40px;
@@ -191,7 +191,7 @@ img {
     transition: 0.3s;
 }
 .Like_Button:hover{
-    background-image: url(CSS/Logos/LIke\ 1.jpg);
+    background-image: url(Logos/LIke\ 1.jpg);
     background-size: 148%;
     background-position: center;
     width: 45px;
