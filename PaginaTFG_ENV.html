@@ -14,14 +14,29 @@
   </section>
 
   <section class="Contenido_Grupo">
+    <div class="Titiulo_Artwork">
+
+    <div></div>
+
     <h1>TFG - LIBRARY</h1>
-    <h2>aaaaaaaaaaaaaaaa</h2>
+
+    <div class="like-container">
+      <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+      <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+      <p id="like-count" >0</p>
+    </div>
+
+    </div>
+    <section class="Contenido_Programas">
+    <h2>This project is the result of my final degree project. It is based on the optimization of large-scale scenarios for 3D animation. To carry out this study, I developed a large-scale 3D scenario filled with props and a character.</h2>
+    </section>
     <section class="Contenido_Programas">
       <div class="Programa_1"></div>
       <div class="Programa_2"></div>
       <div class="Programa_3"></div>
       <div class="Programa_5"></div>
    </section>
+
  </section>
  
  </section>
@@ -46,7 +61,7 @@
     </section >
 
     <section class="Contenido_Grupo">
-      <h3>ENGINE ROOM RENDER 2</h3>
+      <h3>EXTRA RENDERS</h3>
       <ul class="GR_Artkork_Standar">
         <img src="CSS/Imagenes/ren 1 (2).JPG" alt="Imagen 1" class="clickable-image">
         <img src="CSS/Imagenes/ren 2.JPG" alt="Imagen 1" class="clickable-image">
@@ -70,8 +85,9 @@
       <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
 
     </section>
-
-    <script>
+</body>
+<script>
+  // Ampliar la imagen clickada
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.clickable-image');
@@ -91,6 +107,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-    </script>
-</body>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.clickable-image');
+    const overlay = document.getElementById('overlay');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const clone = image.cloneNode();
+            overlay.innerHTML = '';
+            overlay.appendChild(clone);
+            overlay.style.display = 'flex';
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
+
+// Sistema de likes
+const pageId = 'PaginaTFG_ENV'; // Identificador único para esta página
+
+let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+
+document.getElementById('like-count').innerText = likeCount.toString();
+const likeButton = document.getElementById('like-button');
+const resetButton = document.getElementById('reset-button');
+
+if (liked) {
+    likeButton.classList.add('liked');
+}
+
+function handleLike() {
+    if (!liked) {
+        likeCount++;
+        liked = true;
+        likeButton.classList.add('liked');
+    } else {
+        likeCount--;
+        liked = false;
+        likeButton.classList.remove('liked');
+    }
+    localStorage.setItem(`likeCount_${pageId}`, likeCount);
+    localStorage.setItem(`liked_${pageId}`, liked);
+    document.getElementById('like-count').innerText = likeCount.toString();
+    resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+}
+
+function resetLikes() {
+    likeCount = 0;
+    liked = false;
+    localStorage.setItem(`likeCount_${pageId}`, likeCount);
+    localStorage.setItem(`liked_${pageId}`, liked);
+    document.getElementById('like-count').innerText = likeCount.toString();
+    likeButton.classList.remove('liked');
+    resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+}
+</script>
 </html>
