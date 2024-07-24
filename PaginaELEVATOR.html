@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ARIMA LODGE</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+      Warning: This website is in progress
+    </section>
+  
+    <section class="Contenido_Grupo">
+      <div class="Titiulo_Artwork">
+        <div></div>
+      <h1>ARIMA LODGE</h1>
+      <div class="like-container">
+        <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+        <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+        <p id="like-count" >0</p>
+      </div>
+    </div>
+      <h2>My first video game was released by the indi studio Praenaris as a result of Game Jam 2022. 
+        <br>
+        Personally, I am very proud since it was a very short-term and very intense project. 
+        In the same way, amazing results were achieved together with an amazing team.</h2>
+      <section class="Contenido_Programas">
+        <div class="Programa_1"></div>
+        <div class="Programa_2"></div>
+        <div class="Programa_3"></div>
+        <div class="Programa_4"></div>
+     </section>
+   </section>
+
+     <section class="Contenido_Grupo">
+        <h3>ELEVATOR</h3>
+        <ul class="GR_Artkork_Standar">
+          <img src="CSS/Imagenes/ElevatorConcept4.jpg" alt="Imagen 1" class="clickable-image">
+
+          <a href="https://praenaris.itch.io/arima-lodge"><img src="CSS/Imagenes/Play elevator.JPG" class="Artwork_Video"></a>
+
+          <img src="CSS/Imagenes/ELEVATOR1.JPG" alt="Imagen 1" class="clickable-image">
+          <img src="CSS/Imagenes/ELEVATORCREDITS.JPG" alt="Imagen 1" class="clickable-image">
+          
+        </ul>
+      </section >
+  
+        <div id="overlay"></div>
+  
+        <section class="Contenido_Grupo">
+         <h4>More proyects:
+           <a href="/Index.html">Andres.com</a>
+         </h4>
+       </section>
+  
+      <section class="Contenido_Programas">
+        <h2>Artwork made by Andrés Sola Arróniz in collaboration with Praenaris Studio</h2>
+        <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+  
+      </section>
+  
+      <script>
+        // Ampliar la imagen clickada
+      
+      document.addEventListener('DOMContentLoaded', function() {
+          const images = document.querySelectorAll('.clickable-image');
+          const overlay = document.getElementById('overlay');
+      
+          images.forEach(image => {
+              image.addEventListener('click', function() {
+                  const clone = image.cloneNode();
+                  overlay.innerHTML = '';
+                  overlay.appendChild(clone);
+                  overlay.style.display = 'flex';
+              });
+          });
+      
+          overlay.addEventListener('click', function() {
+              overlay.style.display = 'none';
+          });
+      });
+      
+      document.addEventListener('DOMContentLoaded', function() {
+          const images = document.querySelectorAll('.clickable-image');
+          const overlay = document.getElementById('overlay');
+      
+          images.forEach(image => {
+              image.addEventListener('click', function() {
+                  const clone = image.cloneNode();
+                  overlay.innerHTML = '';
+                  overlay.appendChild(clone);
+                  overlay.style.display = 'flex';
+              });
+          });
+      
+          overlay.addEventListener('click', function() {
+              overlay.style.display = 'none';
+          });
+      });
+      
+      // Sistema de likes
+      const pageId = 'PaginaElevator'; // Identificador único para esta página
+      
+      let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+      let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+      
+      document.getElementById('like-count').innerText = likeCount.toString();
+      const likeButton = document.getElementById('like-button');
+      const resetButton = document.getElementById('reset-button');
+      
+      if (liked) {
+          likeButton.classList.add('liked');
+      }
+      
+      function handleLike() {
+          if (!liked) {
+              likeCount++;
+              liked = true;
+              likeButton.classList.add('liked');
+          } else {
+              likeCount--;
+              liked = false;
+              likeButton.classList.remove('liked');
+          }
+          localStorage.setItem(`likeCount_${pageId}`, likeCount);
+          localStorage.setItem(`liked_${pageId}`, liked);
+          document.getElementById('like-count').innerText = likeCount.toString();
+          resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+      }
+      
+      function resetLikes() {
+          likeCount = 0;
+          liked = false;
+          localStorage.setItem(`likeCount_${pageId}`, likeCount);
+          localStorage.setItem(`liked_${pageId}`, liked);
+          document.getElementById('like-count').innerText = likeCount.toString();
+          likeButton.classList.remove('liked');
+          resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+      }
+      </script>
+</body>
+</html>
