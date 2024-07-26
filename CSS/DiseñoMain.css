@@ -49,14 +49,14 @@ a:link {
     background-color: #3a3a3a;
     padding: 10px;
     padding-top: 0px;
-    width: 28%;
+    width: 26%;
     min-width: 300px;
-    height: 6000px;
+    max-height: max-content;
 }
 .contenido {
     background-color: #3a3a3a;
-    width: 72%;
-    height: 6000px;
+    width: 74%;
+    height: fit-content;
 
     padding: 0px;
     padding-top: 0px;   
@@ -95,15 +95,11 @@ a:link {
     border-color: #3a3a3a;
 }
 .Personal_Box{
-    
     border-radius: 15px;
-    
     height: 90%;
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-
     margin: 0px;
     padding: 10px; 
 }
@@ -114,7 +110,6 @@ a:link {
     padding: 0px;
     text-align: center;
     position: relative;
-    
     margin: auto;
     font-size: 30px;
     border-radius: 15px;
@@ -143,30 +138,28 @@ a:link {
     padding: 0px;
 }
 .GR_Iconos{
- 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
     padding: 10px;
     width: 90%;
     max-height: fit-content;
     gap: 10px;
 }
 .Li_Iconos{
-
     display: grid;
-    
     width: 70px;
     padding: 2px;
-
     justify-items: center;
     justify-content: center;
     align-items: center;
     align-content: center;
-    
-    
-
 }
 .Li_Iconos:hover{
     border-color: #27b327;
@@ -181,18 +174,12 @@ a:link {
     background-position: center;
     background-size: 100%;
     background-size: cover;
-    color: rgba(0, 0, 0, 0);
     transition: 200ms;
-
-    overflow: hidden;
     font-size: 20px;
-    text-align: end;
-
-    margin: 0px;
-    padding: 10px;
-    height: 65px;
-    width: 65px;
-
+    width: 6vw;
+    max-width: 80px;
+    height: 6vw;
+    max-height: 80px;
     border: none;
     border: 2px solid;
     border-color: #919191;
@@ -280,14 +267,11 @@ a:link {
     border-radius: 30px;
     border-color: #919191;
 }
-
-
 .Programas{
     width: 30px;
     height: 30px;
     border-radius: 8px;
 }
-
 .Barra_Separacion{
     background-color: #919191;
     width: 55%;
@@ -425,7 +409,7 @@ p {
     flex: fixed;
     text-align: justify;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     padding-top: 0px;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -455,6 +439,7 @@ p {
     text-align: center;
 }
 .GR_Etiquetas {
+    background-color: #131313;
     list-style: none;
     display: flex;
     flex-flow: row wrap;
@@ -774,7 +759,7 @@ img{
     justify-content: center;
     gap: 5px;
     position: relative;
-    bottom: -100px;
+    bottom: -80px;
 
     padding: 20px;
     margin: 0px ;
@@ -810,9 +795,9 @@ img{
     background-position: center;
     width: 13vw;
     max-width: 250px;
-    min-width: 200px;
+    min-width: 180px;
     height: 13vw;
-    min-height: 200px;
+    min-height: 180px;
     max-width: 250px;
     margin: 0px;
     border: none;
@@ -907,9 +892,9 @@ img{
       );
     width: 13vw;
     max-width: 250px;
-    min-width: 200px;
+    min-width: 180px;
     height: 13vw;
-    min-height: 200px;
+    min-height: 180px;
     max-width: 250px;
     overflow: hidden;
     justify-content: center;
@@ -928,7 +913,7 @@ img{
     border-color: transparent #d3d3d3 #d3d3d3 transparent;
     margin: auto;
     position: relative;
-    bottom: -95px;
+    bottom: -60px;
     justify-items: end;
     margin-bottom: 0px;
     rotate: 45deg;
@@ -1052,24 +1037,135 @@ img{
 
 
 
-
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1024px) {
     .cuerpo {
-      width: 100%;
+        width: 95%;
+    }
+    .contenido {
+        width: 90%;
+    }
+    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
+    .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
+    width: 13vw;
+    max-width: 250px;
+    min-width: 200px;
+    height: 13vw;
+    min-height: 200px;
+    max-width: 250px;
+    }
+    .membrana{
+    width: 13vw;
+    max-width: 250px;
+    min-width: 200px;
+    height: 13vw;
+    min-height:  200px;
+    max-width: 250px;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .cuerpo {
+      width: 98%;
+      display: grid;
+      grid-template-columns: 1fr;
     }
     .info_box {
+        width: 15%;
       position: absolute;
       left: -400px;
     }
     .contenido {
-      width: 90%;
+      width: 98%;
     }
     .Flecha{
-        bottom: -15px;
+        bottom: 0px;
+    }
+    h2{
+        text-align: center;
     }
     .GR_Etiquetas_INT{
-        bottom: -40px
-
+        bottom: -80px
     }
-    
+    .GR_Etiquetas{
+      position: absolute;
+      left: -400px;
+      max-width: 100px;
+    }
+    .GR_About{
+      padding: 20px;
+    }
+    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
+    .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
+    width: 17vw;
+    min-width: 260px;
+    height: 17vw;
+    min-height: 260px;
+    }
+    .membrana{
+    width: 13vw;
+    min-width: 260px;
+    height: 13vw;
+    min-height: 260px;
+    }
   }
+
+  @media only screen and (max-width: 430px) {
+    .cuerpo {
+      width: 98%;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .info_box {
+        width: 15%;
+      position: absolute;
+      left: -400px;
+    }
+    .contenido {
+      width: 98%;
+    }
+    .Flecha{
+        bottom: -0px;
+    }
+    h2{
+        text-align: center;
+    }
+    .GR_Etiquetas_INT{
+        bottom: -180px
+    }
+    .GR_Etiquetas{
+      position: absolute;
+      left: -400px;
+      max-width: 100px;
+    }
+    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
+    .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
+    width: 13vw;
+    min-width: 290px;
+    height: 13vw;
+    min-height: 290px;
+    }
+    .membrana{
+    width: 13vw;
+    min-width: 290px;
+    height: 13vw;
+    min-height: 290px;
+    
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
