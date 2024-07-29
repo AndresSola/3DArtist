@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>EMBERS OF THE EVENING PORPS COLLECTION 1</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+      Warning: This website is in progress
+    </section>
+  
+    <section class="Contenido_Grupo">
+      <h1>EMBERS OF THE EVENING PROPS SET 1</h1>
+      <h2>aaaaaaaaaaaaaaaa</h2>
+      <section class="Contenido_Programas">
+        <div class="Programa_1"></div>
+        <div class="Programa_2"></div>
+        <div class="Programa_3"></div>
+        <div class="Programa_4"></div>
+     </section>
+   </section>
+   
+   </section>
+    
+  
+     <section class="Contenido_Grupo">
+        <h3>ENGINE ROOM RENDER 1</h3>
+        <ul class="GR_Artkork_Big">
+          <img src="CSS/Imagenes/FORNITURE PROPS 1.jpg" alt="Imagen 1" class="clickable-image">
+          <img src="CSS/Imagenes/FORNITURE PROPS 2.jpg" alt="Imagen 1" class="clickable-image">
+          <img src="CSS/Imagenes/FOOD PROPS.jpg" alt="Imagen 1" class="clickable-image">
+          <img src="CSS/Imagenes/EXTRA PROPS.jpg" alt="Imagen 1" class="clickable-image">
+        </ul>
+       
+      </section >
+  
+      <section class="Contenido_Grupo">
+  
+        <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+  
+      </section>
+  
+      <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.clickable-image');
+      const overlay = document.getElementById('overlay');
+  
+      images.forEach(image => {
+          image.addEventListener('click', function() {
+              const clone = image.cloneNode();
+              overlay.innerHTML = '';
+              overlay.appendChild(clone);
+              overlay.style.display = 'flex';
+          });
+      });
+  
+      overlay.addEventListener('click', function() {
+          overlay.style.display = 'none';
+      });
+  });
+  
+      </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MINI</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <div class="Titiulo_Artwork">
+      <div></div>
+    <h1>MINI</h1>
+    <div class="like-container">
+      <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+      <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+      <p id="like-count" >0</p>
+    </div>
+    </div>
+    <h2></h2>
+    <section class="Contenido_Programas">
+      <div class="Programa_1"></div>
+      <div class="Programa_3"></div>
+      <div class="Programa_7"></div>
+   </section>
+ </section>
+ 
+ <section class="Contenido_Grupo">
+  <h3>MINI FINAL RENDER</h3>
+  <ul class="GR_Artkork_Big">
+    <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+      <source src="CSS/Videos/MINI Texturizado.mp4" type="video/mp4"> 
+     </video>
+  </ul>
+</section>
+
+<section class="Contenido_Grupo">
+  <h3>CLAY AND WIREFRAME</h3>
+  <ul class="GR_Artkork_Standar">
+    <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+      <source src="CSS/Videos/MINI Base.mp4" type="video/mp4"> 
+     </video>
+
+     <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+      <source src="CSS/Videos/MINI Wireframe.mp4" type="video/mp4"> 
+     </video>
+  </ul>
+</section>
+
+    <section class="Contenido_Grupo">
+      <h4>More proyects:
+        <a href="/Index.html">Andres.com</a>
+      </h4>
+    </section>
+
+    <div id="overlay"></div>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+    </section>
+ 
+</section>
+
+<script>
+  // Ampliar la imagen clickada
+
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.clickable-image');
+    const overlay = document.getElementById('overlay');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const clone = image.cloneNode();
+            overlay.innerHTML = '';
+            overlay.appendChild(clone);
+            overlay.style.display = 'flex';
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.clickable-image');
+    const overlay = document.getElementById('overlay');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const clone = image.cloneNode();
+            overlay.innerHTML = '';
+            overlay.appendChild(clone);
+            overlay.style.display = 'flex';
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
+
+// Sistema de likes
+const pageId = 'PaginaMINI'; // Identificador único para esta página
+
+let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+
+document.getElementById('like-count').innerText = likeCount.toString();
+const likeButton = document.getElementById('like-button');
+const resetButton = document.getElementById('reset-button');
+
+if (liked) {
+    likeButton.classList.add('liked');
+}
+
+function handleLike() {
+    if (!liked) {
+        likeCount++;
+        liked = true;
+        likeButton.classList.add('liked');
+    } else {
+        likeCount--;
+        liked = false;
+        likeButton.classList.remove('liked');
+    }
+    localStorage.setItem(`likeCount_${pageId}`, likeCount);
+    localStorage.setItem(`liked_${pageId}`, liked);
+    document.getElementById('like-count').innerText = likeCount.toString();
+    resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+}
+
+function resetLikes() {
+    likeCount = 0;
+    liked = false;
+    localStorage.setItem(`likeCount_${pageId}`, likeCount);
+    localStorage.setItem(`liked_${pageId}`, liked);
+    document.getElementById('like-count').innerText = likeCount.toString();
+    likeButton.classList.remove('liked');
+    resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+}
+</script>
+</body>
+</html>

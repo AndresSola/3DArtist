@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MANHATTAN</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+  <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <h1>HINDENBURG</h1>
+    <h2>aaaaaaaaaaaaaaaa</h2>
+    <section class="Contenido_Programas">
+      <div class="Programa_1"></div>
+      <div class="Programa_7"></div>
+   </section>
+ </section>
+
+ <section class="Contenido_Grupo">
+  <h3>RFERENCE</h3>
+  <ul class="GR_Artkork_Big">
+     <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+     <source src="CSS/Imagenes/1937 Hindenburg Crashes (Original Audio).mp4" type="video/mp4"> 
+     </ul>
+</section >
+
+<section class="Contenido_Grupo">
+  <h3>SHOTCAM</h3>
+  <ul class="GR_Artkork_Big">
+    <img src="CSS/Imagenes/Hindenburg 1.JPG" alt="Imagen 1" class="clickable-image">
+     </ul>
+</section >
+ 
+ </section>
+   <section class="Contenido_Grupo">
+      <h3>ENVIROMENT</h3>
+      <ul class="GR_Artkork_Standar">
+      <img src="CSS/Imagenes/Hindenburg 2.JPG" alt="Imagen 1" class="clickable-image">
+      <img src="CSS/Imagenes/Hindenburg 3.JPG" alt="Imagen 1" class="clickable-image">
+      <img src="CSS/Imagenes/Hindenburg 4.JPG" alt="Imagen 1" class="clickable-image">
+      <img src="CSS/Imagenes/Hindenburg 5.JPG" alt="Imagen 1" class="clickable-image">
+      </ul>
+   </section>
+
+   <section class="Contenido_Grupo">
+    <h4>More about this proyect:
+      <a href="/PaginaHINDENBURG.html">HINDENBURG</a>
+    </h4>
+
+  </section>
+
+    <div id="overlay"></div>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+    </section>
+      <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.clickable-image');
+      const overlay = document.getElementById('overlay');
+  
+      images.forEach(image => {
+          image.addEventListener('click', function() {
+              const clone = image.cloneNode();
+              overlay.innerHTML = '';
+              overlay.appendChild(clone);
+              overlay.style.display = 'flex';
+          });
+      });
+  
+      overlay.addEventListener('click', function() {
+          overlay.style.display = 'none';
+      });
+  });
+  
+      </script>
+</body>
+</html>

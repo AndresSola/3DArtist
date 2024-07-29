@@ -103,6 +103,8 @@ h1{
 }
 h2{
     font-size: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 h3 {
     font-size: 30px;

@@ -1,3 +1,14 @@
+// Dowload buton
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  const link = document.createElement('a');
+  link.href = 'http://127.0.0.1:5500/WEB\CSS\CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf'; // Ruta al archivo PDF
+  link.download = 'CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+
 // ETIQUETAS
 document.addEventListener('DOMContentLoaded', function() {
     const botones = document.querySelectorAll('.boton');
@@ -343,14 +354,6 @@ document.querySelectorAll('.tag button').forEach(button => {
 
 
 
-// Dowload buton
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    const link = document.createElement('a');
-    link.href = 'CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf'; // Ruta al archivo PDF
-    link.download = 'CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
+
 
 

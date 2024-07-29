@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>EMBERS OF THE EVENING PROPS SET 2</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+      Warning: This website is in progress
+    </section>
+  
+    <section class="Contenido_Grupo">
+      <h1>EMBERS OF THE EVENING PROPS SET 2</h1>
+      <h2>aaaaaaaaaaaaaaaa</h2>
+      <section class="Contenido_Programas">
+        <div class="Programa_1"></div>
+        <div class="Programa_2"></div>
+        <div class="Programa_3"></div>
+        <div class="Programa_4"></div>
+     </section>
+   </section>
+   
+   </section>
+  
+   <section class="Contenido_Grupo">
+    <h3>PROPS</h3>
+    <ul class="GR_Artkork_Standar">
+      
+      <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+        <source src="CSS/Imagenes/Video 1.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+       </video>
+       
+       <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+         <source src="CSS/Imagenes/Video 2.mp4" type="video/mp4"> 
+         Your browser does not support the video tag.
+        </video>
+
+        <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+          <source src="CSS/Imagenes/Video 3.mp4" type="video/mp4"> 
+          Your browser does not support the video tag.
+         </video>
+
+         <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+          <source src="CSS/Imagenes/Video 4.mp4" type="video/mp4"> 
+          Your browser does not support the video tag.
+         </video>
+
+         <video class="Artwork_Video" controls  loop muted alt="Imagen 1">
+          <source src="CSS/Imagenes/Video 5.mp4" type="video/mp4"> 
+         </video>
+    </ul>
+   
+  </section >
+  
+      <section class="Contenido_Grupo">
+  
+        <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+  
+      </section>
+  
+      <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.clickable-image');
+      const overlay = document.getElementById('overlay');
+  
+      images.forEach(image => {
+          image.addEventListener('click', function() {
+              const clone = image.cloneNode();
+              overlay.innerHTML = '';
+              overlay.appendChild(clone);
+              overlay.style.display = 'flex';
+          });
+      });
+  
+      overlay.addEventListener('click', function() {
+          overlay.style.display = 'none';
+      });
+  });
+  
+      </script>
+   
+</body>
+</html>

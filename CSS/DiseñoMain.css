@@ -77,11 +77,23 @@ a:link {
     justify-content: center; 
     border-radius: 15px;  
 }
-
+.OpenToWork{
+    background-image: url(Imagenes/Andres\ Solaopento\ work.png);
+    background-size: cover;
+    background-size: 100%;
+    
+    width: 275px;
+    height: 275px;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
 .perfil {
     background-image: url(Imagenes/Andres\ Sola.jpg);
     background-size: cover;
-    background-size: 100%;
+    background-size: 80%;
     background-position: top;
     width: 270px;
     height: 270px;
@@ -90,7 +102,7 @@ a:link {
     padding: 0px;
     margin: 0 auto;
 
-    border: 5px solid;
+    border: 0px solid;
     border-radius: 50%;
     border-color: #3a3a3a;
 }
@@ -169,7 +181,7 @@ a:link {
     width: 250px;
     height: 250px;
 }
-.submit_butons1, .submit_butons2, .submit_butons3 , .submit_butons4 , .submit_butons5, .submit_butons6 ,.submit_butons7 ,.submit_butons8{
+.submit_butons1, .submit_butons2, .submit_butons3 , .submit_butons4 , .submit_butons5, .submit_butons6 ,.submit_butons7 ,.submit_butons8 ,.submit_butons9{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -177,9 +189,9 @@ a:link {
     transition: 200ms;
     font-size: 20px;
     width: 6vw;
-    max-width: 80px;
+    max-width: 70px;
     height: 6vw;
-    max-height: 80px;
+    max-height: 70px;
     border: none;
     border: 2px solid;
     border-color: #919191;
@@ -228,7 +240,10 @@ a:link {
 .submit_butons8 {
     background-image: url(Logos/Discord.jpeg);
 }
-.submit_butons1:hover, .submit_butons2:hover, .submit_butons3:hover, .submit_butons4:hover, .submit_butons5:hover, .submit_butons6:hover ,.submit_butons7:hover ,.submit_butons8:hover{
+.submit_butons9{
+    background-image: url(Logos/skech.png);
+}
+.submit_butons1:hover, .submit_butons2:hover, .submit_butons3:hover, .submit_butons4:hover, .submit_butons5:hover, .submit_butons6:hover ,.submit_butons7:hover ,.submit_butons8:hover ,.submit_butons9:hover{
     cursor: pointer;
     scale: 106%;
     transition: 200ms;
@@ -411,7 +426,7 @@ p {
     align-items: center;
     padding: 30px;
     padding-top: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 90;
@@ -844,7 +859,7 @@ img{
     background-image: url(Miniaturas/mini\ mini.png);
 }
 .PRO_artwork_6 {
-    background-image: url(Miniaturas/mini\ mando.png);
+    background-image: url(Miniaturas/mini\ Casco\ mando.jpg);
 }
 .PRO_artwork_7 {
     background-image: url(Miniaturas/mini\ astronave.png);
@@ -856,7 +871,7 @@ img{
     background-image: url(Miniaturas/mini\ HINDENBURG.jpg);
 }
 .PRO_artwork_10 {
-    background-image: url(Miniaturas/mini\ Cartoon\ hab.png);
+    background-image: url(Miniaturas/mini\ Cleection\ Props.jpg);
 }
 .PRO_artwork_11 {
     background-image: url(Miniaturas/mini\ TFG\ Props.jpg);
