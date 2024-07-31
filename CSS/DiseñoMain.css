@@ -50,8 +50,27 @@ a:link {
     padding: 10px;
     padding-top: 0px;
     width: 26%;
+    height: 100%;
     min-width: 300px;
     max-height: max-content;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+.toggle_button {
+    position: fixed;
+    top: 70px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1000;
 }
 .contenido {
     background-color: #3a3a3a;
@@ -190,8 +209,10 @@ a:link {
     font-size: 20px;
     width: 6vw;
     max-width: 70px;
+    min-width: 60px;
     height: 6vw;
     max-height: 70px;
+    min-height: 60px;
     border: none;
     border: 2px solid;
     border-color: #919191;
@@ -1065,7 +1086,7 @@ img{
     .contenido {
         width: 90%;
     }
-    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
     .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
     width: 13vw;
@@ -1094,21 +1115,35 @@ img{
       grid-template-columns: 1fr;
     }
     .info_box {
-        width: 15%;
-      position: absolute;
-      left: -400px;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 98%;
+        z-index: 999;
+        transition: left 0.3s ease;
+    }
+    .info_box.visible {
+        left: 0;
+    }
+
+    .toggle_button .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .toggle_button.open .arrow {
+        transform: rotate(180deg);
     }
     .contenido {
       width: 98%;
     }
     .Flecha{
-        bottom: 0px;
+        bottom: -70px;
     }
     h2{
         text-align: center;
     }
     .GR_Etiquetas_INT{
-        bottom: -80px
+        bottom: -85px
     }
     .GR_Etiquetas{
       position: absolute;
@@ -1118,7 +1153,7 @@ img{
     .GR_About{
       padding: 20px;
     }
-    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
     .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
     width: 17vw;
@@ -1141,15 +1176,29 @@ img{
       grid-template-columns: 1fr;
     }
     .info_box {
-        width: 15%;
-      position: absolute;
-      left: -400px;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 98%;
+        z-index: 999;
+        transition: left 0.3s ease;
+    }
+    .info_box.visible {
+        left: 0;
+    }
+
+    .toggle_button .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .toggle_button.open .arrow {
+        transform: rotate(180deg);
     }
     .contenido {
       width: 98%;
     }
     .Flecha{
-        bottom: -0px;
+        bottom: -90px;
     }
     h2{
         text-align: center;
@@ -1162,7 +1211,31 @@ img{
       left: -400px;
       max-width: 100px;
     }
-    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+    .GR_About_Titulo{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        justify-content: center;
+    }
+    .submit_butons1, .submit_butons2, .submit_butons3 , .submit_butons4 , .submit_butons5, .submit_butons6 ,.submit_butons7 ,.submit_butons8 ,.submit_butons9{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-size: cover;
+        transition: 200ms;
+        font-size: 20px;
+        width: 6vw;
+        min-width: 70px;
+        height: 6vw;
+        min-height: 70px;
+        border: none;
+        border: 2px solid;
+        border-color: #919191;
+        border-radius: 50px;
+        filter: saturate(20%);
+    }
+    .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
     .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
     width: 13vw;

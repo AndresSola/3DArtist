@@ -53,64 +53,69 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-
-
-
-
 // COPIAR AL PORTAPAPELES EL TEXTO
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtener los botones con ID específico
-    var boton1 = document.getElementById('boton1');
-    var boton2 = document.getElementById('boton2');
-    var boton3 = document.getElementById('boton3');
-    var boton4 = document.getElementById('boton4');
-    var boton5 = document.getElementById('boton5');
-    var boton4 = document.getElementById('boton6');
-   
+  // Obtener los botones con ID específico
+  var boton1 = document.getElementById('boton1');
+  var boton2 = document.getElementById('boton2');
+  var boton3 = document.getElementById('boton3');
+  var boton4 = document.getElementById('boton4');
+  var boton5 = document.getElementById('boton5');
+  var boton6 = document.getElementById('boton6');
+  var boton7 = document.getElementById('boton7');
+  var boton8 = document.getElementById('boton8');
+  var boton9 = document.getElementById('boton9');
 
-    // Agregar un evento de clic a cada botón
-    boton1.addEventListener('click', function() {
-        copiarTexto("andressola00@gmail.com");
-    });
+  // Agregar un evento de clic a cada botón
+  boton1.addEventListener('click', function() {
+      copiarTexto("andressola00@gmail.com");
+  });
 
-    boton2.addEventListener('click', function() {
-        copiarTexto("https://www.artstation.com/andr3sol4");
-    });
+  boton2.addEventListener('click', function() {
+      copiarTexto("https://www.artstation.com/andr3sol4");
+  });
 
-    boton3.addEventListener('click', function() {
-        copiarTexto("https://youtu.be/qJggG6HTmvY");
-    });
+  boton3.addEventListener('click', function() {
+      copiarTexto("https://www.instagram.com/andres_sola_a/");
+  });
 
-    boton4.addEventListener('click', function() {
-        copiarTexto("https://www.infojobs.net/candidate/cv/view/index.xhtml?dgv=1730496209650055258");
-    });
+  boton4.addEventListener('click', function() {
+      copiarTexto("https://www.linkedin.com/in/andres-sola-arr%C3%B3niz-1000a9251/");
+  });
 
-    boton5.addEventListener('click', function() {
-        copiarTexto("niatirosmato");
-    });
+  boton5.addEventListener('click', function() {
+      copiarTexto("https://youtu.be/qJggG6HTmvY");
+  });
 
-    boton6.addEventListener('click', function() {
-        copiarTexto("616341720");
-    });
+  boton6.addEventListener('click', function() {
+      copiarTexto("https://www.infojobs.net/candidate/cv/view/index.xhtml?dgv=1730496209650055258");
+  });
 
-    // Función para copiar texto al portapapeles
-    function copiarTexto(texto) {
-        navigator.clipboard.writeText(texto)
-            .then(function() {
-                console.log('Texto copiado al portapapeles:', texto);
-                alert('Texto copiado al portapapeles');
-            })
-            .catch(function(error) {
-                console.error('Error al copiar el texto:', error);
-                alert('Error al copiar el texto');
-            });
-    }
+  boton7.addEventListener('click', function() {
+      copiarTexto("niatirosmato");
+  });
+
+  boton8.addEventListener('click', function() {
+      copiarTexto("616341720");
+  });
+
+  boton9.addEventListener('click', function() {
+      copiarTexto("https://sketchfab.com/Andres_sola");
+  });
+
+  // Función para copiar texto al portapapeles
+  function copiarTexto(texto) {
+      navigator.clipboard.writeText(texto)
+          .then(function() {
+              console.log('Texto copiado al portapapeles:', texto);
+              alert('Texto copiado al portapapeles');
+          })
+          .catch(function(error) {
+              console.error('Error al copiar el texto:', error);
+              alert('Error al copiar el texto');
+          });
+  }
 });
-
-
 
 
 // Comentarios
@@ -174,7 +179,6 @@ document.getElementById('send-button').addEventListener('click', function() {
 });
 
 
-
 // ABOUT METEXTO
 document.addEventListener('DOMContentLoaded', function() {
     var textElement = document.getElementById('text');
@@ -217,10 +221,6 @@ document.getElementById('languageButton').addEventListener('click', function() {
         button.innerHTML = "ING";
     }
 });
-
-
-
-
 
 
 // WORK EXPERIENCE DESPLEGABLES
@@ -275,11 +275,6 @@ function resetAllArrows() {
 }
 
 
-
-
-
-
-
 // COPIAR TEXTO
 function myFunction() {
   // Get the text field
@@ -296,7 +291,6 @@ function myFunction() {
   alert("Copied the text: " + copyText.value);
   
 }
-
 
 
 // Inicializar contadores de likes
@@ -343,13 +337,50 @@ var likeCounts = [0, 0, 0];
             addLike(2);
         });
 
-// Añadir evento de clic al botón
-document.querySelectorAll('.tag button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevenir comportamiento por defecto
-                window.location.href = this.parentElement.getAttribute('href');
-            });
-        });
+
+// Añadir evento de clic al botón ventana desplegable
+document.addEventListener('DOMContentLoaded', () => {
+  const infoBox = document.getElementById('infoBox');
+  const toggleButton = document.getElementById('toggleButton');
+  let isInfoBoxVisible = false;
+
+  function toggleInfoBox() {
+      isInfoBoxVisible = !isInfoBoxVisible;
+      infoBox.classList.toggle('visible', isInfoBoxVisible);
+      toggleButton.classList.toggle('open', isInfoBoxVisible);
+      // Cambiar la dirección de la flecha en el botón
+      toggleButton.querySelector('.arrow').innerHTML = isInfoBoxVisible ? '&larr;' : '&rarr;';
+  }
+
+  toggleButton.addEventListener('click', toggleInfoBox);
+
+  let startX = 0;
+  let endX = 0;
+
+  document.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchmove', (e) => {
+      endX = e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchend', () => {
+      if (startX < endX - 50) { // Deslizar a la derecha
+          isInfoBoxVisible = true;
+          infoBox.classList.add('visible');
+          toggleButton.classList.add('open');
+          toggleButton.querySelector('.arrow').innerHTML = '&larr;'; // Cambiar la flecha a la izquierda
+      } else if (startX > endX + 50) { // Deslizar a la izquierda
+          isInfoBoxVisible = false;
+          infoBox.classList.remove('visible');
+          toggleButton.classList.remove('open');
+          toggleButton.querySelector('.arrow').innerHTML = '&rarr;'; // Cambiar la flecha a la derecha
+      }
+  });
+});
+
+
 
 
 
