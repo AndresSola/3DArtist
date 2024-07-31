@@ -717,7 +717,7 @@ img{
     margin: 3px;
     gap: 10px; 
 }
-.hr_Rojo, .hr_Verde, .hr_Azul, .hr_Naranja, .hr_Morado,.hr_Amarillo,.hr_Blanco, .hr_Rosa, .hr_Cian, .hr_Pistacho, .hr_Gris{
+.hr_Rojo, .hr_Verde, .hr_Azul, .hr_Naranja, .hr_Morado,.hr_Amarillo,.hr_Blanco, .hr_Rosa, .hr_Cian, .hr_Pistacho, .hr_Gris, .hr_AzulOscuro{
     width: 15px;
     height: 15px;
     border: 2px solid;
@@ -760,6 +760,9 @@ img{
 .hr_Gris{
     background-color: rgb(116, 116, 116);
 }
+.hr_AzulOscuro{
+    background-color: darkslateblue;
+}
 .EtiquetaVideogameSelected {
     filter: saturate(20%);
     scale: 95%;
@@ -801,7 +804,7 @@ img{
     filter: drop-shadow(0px 0px 4px #3a3a3a);
     pointer-events: none;
 }
-.ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8,
+.ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
 .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
 .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{
     color: rgba(252, 0, 0, 0);
@@ -842,6 +845,9 @@ img{
 }
 .ENV_artwork_8 {
     background-image: url(Miniaturas/mini\ TFG\ Escenario.jpg);
+}
+.ENV_artwork_9 {
+    background-image: url(Miniaturas/mini\ KINGSMAN.jpg);
 }
 .PRO_artwork_1 {
     background-image: url(Miniaturas/miniatura\ 1.jpg);
@@ -885,7 +891,7 @@ img{
 .CHA_artwork_3{
     background-image: url(Miniaturas/mini\ TFG\ ELOR.jpg);
 }
-.ENV_artwork_1:hover, .ENV_artwork_2:hover, .ENV_artwork_3:hover, .ENV_artwork_4:hover, .ENV_artwork_5:hover, .ENV_artwork_6:hover, .ENV_artwork_7:hover, .ENV_artwork_8:hover,
+.ENV_artwork_1:hover, .ENV_artwork_2:hover, .ENV_artwork_3:hover, .ENV_artwork_4:hover, .ENV_artwork_5:hover, .ENV_artwork_6:hover, .ENV_artwork_7:hover, .ENV_artwork_8:hover, .ENV_artwork_9:hover,
 .PRO_artwork_1:hover, .PRO_artwork_2:hover, .PRO_artwork_3:hover, .PRO_artwork_4:hover, .PRO_artwork_5:hover, .PRO_artwork_6:hover, .PRO_artwork_7:hover, .PRO_artwork_8:hover,.PRO_artwork_9:hover,.PRO_artwork_10:hover,.PRO_artwork_11:hover,
 .CHA_artwork_1:hover, .CHA_artwork_2:hover, .CHA_artwork_3:hover{
     color: rgba(255, 255, 255, 0.9);  
