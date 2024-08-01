@@ -1,3 +1,46 @@
+// Añadir evento de clic al botón ventana desplegable
+document.addEventListener('DOMContentLoaded', () => {
+  const infoBox = document.getElementById('infoBox');
+  const toggleButton = document.getElementById('toggleButton');
+  let isInfoBoxVisible = false;
+
+  function toggleInfoBox() {
+      isInfoBoxVisible = !isInfoBoxVisible;
+      infoBox.classList.toggle('visible', isInfoBoxVisible);
+      toggleButton.classList.toggle('open', isInfoBoxVisible);
+      // Cambiar la dirección de la flecha en el botón
+      toggleButton.querySelector('.arrow').innerHTML = isInfoBoxVisible ? '&larr;' : '&rarr;';
+  }
+
+  toggleButton.addEventListener('click', toggleInfoBox);
+
+  let startX = 0;
+  let endX = 0;
+
+  document.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchmove', (e) => {
+      endX = e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchend', () => {
+      if (startX < endX - 50) { // Deslizar a la derecha
+          isInfoBoxVisible = true;
+          infoBox.classList.add('visible');
+          toggleButton.classList.add('open');
+          toggleButton.querySelector('.arrow').innerHTML = '&larr;'; // Cambiar la flecha a la izquierda
+      } else if (startX > endX + 50) { // Deslizar a la izquierda
+          isInfoBoxVisible = false;
+          infoBox.classList.remove('visible');
+          toggleButton.classList.remove('open');
+          toggleButton.querySelector('.arrow').innerHTML = '&rarr;'; // Cambiar la flecha a la derecha
+      }
+  });
+});
+
+
 // Dowload buton
 document.getElementById('downloadBtn').addEventListener('click', function() {
   const link = document.createElement('a');
@@ -336,49 +379,9 @@ var likeCounts = [0, 0, 0];
         document.getElementById('likeButton3').addEventListener('click', function() {
             addLike(2);
         });
+        
 
 
-// Añadir evento de clic al botón ventana desplegable
-document.addEventListener('DOMContentLoaded', () => {
-  const infoBox = document.getElementById('infoBox');
-  const toggleButton = document.getElementById('toggleButton');
-  let isInfoBoxVisible = false;
-
-  function toggleInfoBox() {
-      isInfoBoxVisible = !isInfoBoxVisible;
-      infoBox.classList.toggle('visible', isInfoBoxVisible);
-      toggleButton.classList.toggle('open', isInfoBoxVisible);
-      // Cambiar la dirección de la flecha en el botón
-      toggleButton.querySelector('.arrow').innerHTML = isInfoBoxVisible ? '&larr;' : '&rarr;';
-  }
-
-  toggleButton.addEventListener('click', toggleInfoBox);
-
-  let startX = 0;
-  let endX = 0;
-
-  document.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-  });
-
-  document.addEventListener('touchmove', (e) => {
-      endX = e.touches[0].clientX;
-  });
-
-  document.addEventListener('touchend', () => {
-      if (startX < endX - 50) { // Deslizar a la derecha
-          isInfoBoxVisible = true;
-          infoBox.classList.add('visible');
-          toggleButton.classList.add('open');
-          toggleButton.querySelector('.arrow').innerHTML = '&larr;'; // Cambiar la flecha a la izquierda
-      } else if (startX > endX + 50) { // Deslizar a la izquierda
-          isInfoBoxVisible = false;
-          infoBox.classList.remove('visible');
-          toggleButton.classList.remove('open');
-          toggleButton.querySelector('.arrow').innerHTML = '&rarr;'; // Cambiar la flecha a la derecha
-      }
-  });
-});
 
 
 
