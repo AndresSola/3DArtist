@@ -57,13 +57,14 @@ a:link {
 }
 .toggle_button {
     position: fixed;
-    top: 70px;
+    top: 65px;
     left: 30px;
-    width: 40px;
-    height: 40px;
-    background-color: black;
-    border: none;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #3a3a3a;
+    border: 2px solid;
+    border-radius: 20%;
+    border-color: #919191;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -925,7 +926,6 @@ img{
     border-radius: 10px;
 }
 .membrana {
-    
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0) 20% 65%,
@@ -944,7 +944,23 @@ img{
     margin: 0px;
     padding: 0px;
     border-radius: 10px;
-
+}
+.Cartel_New_ArtWork{
+    background-image: url(Miniaturas/mini\ NewArtWork.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    width: 13vw;
+    max-width: 250px;
+    min-width: 180px;
+    height: 13vw;
+    min-height: 180px;
+    max-width: 250px;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
 }
 .Flecha{
     background-color: transparent;
@@ -1006,7 +1022,6 @@ img{
     background-color: #3a3a3a;
     border-color: #919191;
 }
-
   .comment {
     width: 100%;
     height: 40px;
@@ -1023,7 +1038,6 @@ img{
     background-color: #3a3a3a;
     border-color: #919191;
   }
-  
   .delete-button {
     width: auto;
     height: 40px;
@@ -1036,8 +1050,6 @@ img{
     cursor: pointer;
     margin-left: 5px;
   }
-
-
   .SwitcherBodyLang {
     font-family: Arial, sans-serif;
     display: flex;
@@ -1047,11 +1059,9 @@ img{
     margin: 0;
     background-color: #f0f0f0;
 }
-
 .SwitchLang {
     text-align: center;
 }
-
 #languageButton {
     width: 50px;
     height: 30px;
@@ -1068,15 +1078,10 @@ img{
     border-radius: 50px;
     
 }
-
 #languageButton:hover {
     background-color: #919191;
     color: #282828;
 }
-
-
-
-
 
 
 @media only screen and (max-width: 1024px) {
@@ -1125,13 +1130,11 @@ img{
     .info_box.visible {
         left: 0;
     }
-
     .toggle_button .arrow {
         transition: transform 0.3s ease;
     }
-
     .toggle_button.open .arrow {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
     .contenido {
       width: 98%;
@@ -1167,6 +1170,12 @@ img{
     height: 13vw;
     min-height: 260px;
     }
+    .Cartel_New_ArtWork{
+        width: 13vw;
+    min-width: 260px;
+    height: 13vw;
+    min-height: 260px;
+    }
   }
 
   @media only screen and (max-width: 430px) {
@@ -1192,19 +1201,19 @@ img{
     }
 
     .toggle_button.open .arrow {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
     .contenido {
       width: 98%;
     }
     .Flecha{
-        bottom: -90px;
+        bottom: -100px;
     }
     h2{
         text-align: center;
     }
     .GR_Etiquetas_INT{
-        bottom: -180px
+        bottom: -120px
     }
     .GR_Etiquetas{
       position: absolute;
@@ -1248,7 +1257,12 @@ img{
     min-width: 290px;
     height: 13vw;
     min-height: 290px;
-    
+    }
+    .Cartel_New_ArtWork{
+        width: 13vw;
+    min-width: 290px;
+    height: 13vw;
+    min-height: 290px;
     }
   }
 
