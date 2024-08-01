@@ -63,8 +63,10 @@ body {
     background-size: 100%;
     width: 6vw;
     max-width: 60px;
+    min-width: 45px;
     height: 6vw;
     max-height: 60px;
+    min-height: 45px;
     margin: 0px;
     padding: 0px;
     border: 3px solid;
@@ -94,7 +96,7 @@ body {
 }
 
 h1{
-    font-size: 45px;
+    font-size: clamp(16px, 2.8rem, 45px);
     max-height: max-content;
     padding: 0px;
     margin: 15px 0px 20px 0px; 
@@ -102,9 +104,9 @@ h1{
     text-align: center;
 }
 h2{
-    font-size: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
+    font-size: clamp(16px, 1.2rem, 22px);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 h3 {
     font-size: 30px;
@@ -118,11 +120,11 @@ img {
     border-color: #131313;
 }
 .AS{
-    background-size: 150%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 50px;
 }
 
 
@@ -220,8 +222,22 @@ img {
     .Contenido_Grupo {
       width: 90%;
     }
+    h2{
+        font-size: clamp(16px, 1.2rem, 22px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .Contenido_Programas{
-        width: 90%;
+        width: 100%;
+        min-height: 60px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    padding-bottom: 0px;
+    margin: 10px auto ;
+    gap: 20px;
     }
     .Programa_1, .Programa_2, .Programa_3, .Programa_4,.Programa_5,.Programa_6,.Programa_7{
         background-position: center;
