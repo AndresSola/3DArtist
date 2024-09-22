@@ -476,7 +476,7 @@ p {
     text-align: center;
 }
 .GR_Etiquetas {
-    background-color: #131313;
+    background-color: #1b1b1b;
     list-style: none;
     display: flex;
     flex-flow: row wrap;
