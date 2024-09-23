@@ -1095,7 +1095,7 @@ img{
         width: 90%;
     }
     .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
-    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
     width: 13vw;
     max-width: 250px;
@@ -1160,7 +1160,7 @@ img{
       padding: 20px;
     }
     .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
-    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
     width: 17vw;
     min-width: 260px;
@@ -1248,7 +1248,7 @@ img{
         filter: saturate(20%);
     }
     .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9,
-    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, 
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3{   
     width: 13vw;
     min-width: 290px;
