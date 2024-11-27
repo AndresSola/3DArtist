@@ -24,7 +24,7 @@
 
           <section class="Contenido_Grupo">
             <div class="perfil">
-              <div class="OpenToWork"></div>
+              <div hidden class="OpenToWork"></div>
             </div> 
 
             <h1>ANDRES SOLA ARRONIZ</h1>
@@ -246,7 +246,7 @@
                   <ul class="GR_Languages">
                     <li class="Li_Languages">✔️ ESPAÑOL: NATIVE</li>
                     <li class="Li_Languages">✔️ EUSKARA: B2</li>
-                    <li class="Li_Languages"><hr class="Guion_Naranja"> ENGLISH: B2</li>   
+                    <li hidden="Li_Languages"><hr class="Guion_Naranja"> ENGLISH: B2</li>   
                   </ul>
               </div>
 
@@ -347,6 +347,11 @@
             </div>
             <div class="Contenido_Grupo">
             <div class="GR_Etiquetas" >
+              
+              <button class="EtiquetaVideogame boton" id="boton8">
+                <hr class="hr_Blanco">
+                <h4>PROCEDURAL</h4>
+              </button>
             
               <button class="EtiquetaVideogame boton" id="boton1">
                 <hr class="hr_Rojo">
@@ -383,11 +388,6 @@
                 <h4>RIG</h4>
               </button>
 
-              <button class="EtiquetaVideogame boton" id="boton8">
-                <hr class="hr_Blanco">
-                <h4>WIP</h4>
-              </button>
-
               <button class="EtiquetaVideogame boton" id="boton9">
                 <hr class="hr_Cian">
                 <h4>GRUPAL PROYECT</h4>
@@ -403,7 +403,7 @@
                 <h4>CGI</h4>
               </button>
 
-              <button class="EtiquetaVideogame boton" id="boton12">
+              <button hidden ="EtiquetaVideogame boton" id="boton12">
                 <hr class="hr_Blanco">
                 <h4>PHOTOGRAMMETRY</h4>
               </button>
@@ -412,12 +412,37 @@
                 <hr class="hr_AzulOscuro">
                 <h4>RECREATION</h4>
               </button>
+
           </div>
+
+          <section hidden class="Contenido_Grupo">
+            <h2>TOOLS</h2>
+
+
+          </section>
 
             <section class="Contenido_Grupo">
             <h2>ENVIROMENTS</h2>
 
             <div class="contenido_img">
+
+              <a href="PaginaASTEROID BELT.html" class="tag" data-boton="boton2 boton3 boton6 boton8 boton11">
+                <button class="ENV_artwork_10 tag" data-boton="boton2 boton3 boton6 boton8 boton11">   
+                    <div class="membrana">  
+                    <div class="Cartel_New_ArtWork">
+                        <h3>ASTEROID_BELT</h3>          
+                        <div class="GR_Etiquetas_INT">
+                            <hr class="hr_Verde">
+                            <hr class="hr_Azul">
+                            <hr class="hr_Amarillo">
+                            <hr class="hr_Blanco">
+                            <hr class="hr_Gris">
+                        </div>
+                        <div class="Flecha"></div> 
+                     </div>   
+                    </div>  
+                </button>
+            </a>
 
               <a href="PaginaTFG_ENV.html" class="tag" data-boton="boton2 boton3">
                 <button class="ENV_artwork_8 tag" data-boton="boton2 boton3">   
@@ -481,7 +506,6 @@
               <a href="PaginaKINGSMAN.html" class="tag" data-boton="boton2 boton3 boton11 boton13">
                 <button class="ENV_artwork_9 tag" data-boton="boton2 boton3 boton11 boton13">
                   <div class="membrana"> 
-                  <div class="Cartel_New_ArtWork">
                   <h3>KINGSMAN</h3>
                   <div class="GR_Etiquetas_INT">
                     <hr class="hr_Verde">
@@ -490,7 +514,6 @@
                     <hr class="hr_AzulOscuro">
                   </div>
                   <div class="Flecha"></div>
-                </div>
                 </div>
                 </button>
               </a>
@@ -557,18 +580,16 @@
 
             <div class="contenido_img">
 
-              <a href="PaginaRIFLE STYL.html" class="tag" data-boton="boton2 boton3 boton4 boton5" ></a>
+              <a href="PaginaRIFLE STYL.html" class="tag" data-boton="boton2 boton3 boton4 boton5" >
                 <button class="PRO_artwork_12 tag" data-boton="boton2 boton3 boton4 boton5">
                   <div class="membrana">
-                    <div class="Cartel_New_ArtWork">
-                    <h3>RIFLE</h3>
+                  <h3>RIFLE</h3>
                   <div class="GR_Etiquetas_INT">
                     <hr class="hr_Verde">
                     <hr class="hr_Azul">
                     <hr class="hr_Cian">
                   </div>
                   <div class="Flecha"></div>
-                </div>
                 </div>
                 </button>
               </a>
@@ -721,7 +742,7 @@
                 </button>
               </a>
 
-              <a href="PaginaMASK.html" class="tag" data-boton="boton2 boton4">
+              <a hidden href="PaginaMASK.html" class="tag" data-boton="boton2 boton4">
                 <button class="PRO_artwork_8 tag" data-boton="boton2 boton4">
                   <div class="membrana">
                   <h3>MASK</h3>
