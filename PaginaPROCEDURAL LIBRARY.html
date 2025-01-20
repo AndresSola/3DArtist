@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PROCEDURAL LIBRARY</title>
+   <link rel="website icon" type="png" href="CSS/Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <div class="Titiulo_Artwork">
+    <div></div>
+    <h1>PROCEDURAL LIBRARY</h1>
+    <div class="like-container">
+      <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+      <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+      <p id="like-count" >0</p>
+    </div>
+  </div>
+  <section class="Contenido_Programas">
+    <h2>This artwork was created Procedurally with Houdini and Unreal Engine in the Masters Degree in Techart and Houdini for Videogames by TECHART WORLDS. I created multiple decorative processes within Houdini procedurally and then created a scene in Unreal Engine 5 to create a procedural library.</h2>
+    </section>
+    <section class="Contenido_Programas">
+      <div class="Programa_8"></div>
+      <div class="Programa_5"></div>
+   </section>
+ </section>
+ 
+ </section>
+   <section class="Contenido_Grupo">
+      <h3>CINEMATIC</h3>
+
+      <ul class="GR_Artkork_Big">
+        <video class="Artwork_Video" controls loop autoplay mute="Imagen 1">
+        <source src="CSS/Videos/M2_Andres_Sola_LibraryComp.mp4" type="video/mp4"> 
+     </ul>
+
+    </section>
+
+     <section class="Contenido_Grupo">
+      <h3>RENDERS</h3>
+
+      <ul class="GR_Artkork_Standar">
+
+        <img src="CSS/Imagenes/ProcLibraryRen _09.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _10.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _11.png" alt="Imagen 1" class="clickable-image">  
+        <img src="CSS/Imagenes/ProcLibraryRen _02.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _01.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _05.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _06.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _07.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _08.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _03.JPG" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/ProcLibraryRen _04.JPG" alt="Imagen 1" class="clickable-image">
+  
+      </ul>
+     </section>
+
+  </section >
+
+      <div id="overlay"></div>
+    </section >
+
+    <section class="Contenido_Grupo">
+      <h4>More about this proyect:
+        <a href="PaginaPROCEDURAL_LIBRARY_TOOLS.html">PROCEDURAL LIBRARY TOOLS</a>
+      </h4>
+
+      <h4>More proyects:
+        <a href="index.html">Andres Sola.com</a>
+      </h4>
+
+    </section>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+    </section>
+
+    <script>
+      // Ampliar la imagen clickada
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    // Sistema de likes
+    const pageId = 'PaginaAsteroid_Belt'; // Identificador único para esta página
+    
+    let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+    let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+    
+    document.getElementById('like-count').innerText = likeCount.toString();
+    const likeButton = document.getElementById('like-button');
+    const resetButton = document.getElementById('reset-button');
+    
+    if (liked) {
+        likeButton.classList.add('liked');
+    }
+    
+    function handleLike() {
+        if (!liked) {
+            likeCount++;
+            liked = true;
+            likeButton.classList.add('liked');
+        } else {
+            likeCount--;
+            liked = false;
+            likeButton.classList.remove('liked');
+        }
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    
+    function resetLikes() {
+        likeCount = 0;
+        liked = false;
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        likeButton.classList.remove('liked');
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    </script>
+</body>
+</html>
