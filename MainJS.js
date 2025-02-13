@@ -228,9 +228,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var button = document.getElementById('languageButton');
 
     // Configurar el contenido inicial en español
-    textElement.innerHTML = "Hola!👋, mi nombre es ANDRES SOLA ARRONIZ y soy Artista 3D JUNIOR de Entornos y Props.<br><br>" +
-        "Soy un apasionado del la creación 3D con habilidades en modelado 3D, texturizado, iluminación y renderizado, utilizando software como Maya y Substance Painter. He trabajado en varios proyectos colaborativos como generalista 3D destacándome en la creación de props.<br><br>" +
-        "Mi objetivo es seguir creciendo en la industria de videojuegos y animación, aportando creatividad y técnica para crear entornos y props visualmente atractivos. Estoy siempre dispuesto a aprender y mejorar, buscando contribuir a proyectos innovadores y de alta calidad.";
+    textElement.innerHTML = "Hola! 👋 Mi nombre es ANDRES SOLA ARRONIZ y soy 3D Environment Procedural Technical Artist.<br><br>" +
+            "Soy un profesional especializado en la creación de entornos escalables y eficientes mediante técnicas procedurales, combinando arte y tecnología para resolver desafíos creativos. Mi experiencia incluye el diseño de sistemas automatizados para generación de entornos, creación de materiales procedurales con Copernicus (COPs), y optimización de flujos de trabajo usando herramientas como Houdini, Unreal Engine y Python.<br><br>" +
+            "Mi objetivo es aportar soluciones técnicas creativas en la industria de videojuegos o cine/VFX, potenciando la creación de mundos virtuales dinámicos y eficaces. Combino mi pasión por el arte 3D con un enfoque metódico, buscando siempre aprender nuevas herramientas y mejorar procesos.";
     button.innerText = "ING";
 });
 
@@ -238,29 +238,29 @@ document.getElementById('languageButton').addEventListener('click', function() {
     var textElement = document.getElementById('text');
     var button = document.getElementById('languageButton');
     
-    if (textElement.innerHTML === "Hola!👋, mi nombre es ANDRES SOLA ARRONIZ y soy Artista 3D JUNIOR de Entornos y Props.<br><br>" +
-            "Soy un apasionado del la creación 3D con habilidades en modelado 3D, texturizado, iluminación y renderizado, utilizando software como Maya y Substance Painter. He trabajado en varios proyectos colaborativos como generalista 3D destacándome en la creación de props.<br><br>" +
-            "Mi objetivo es seguir creciendo en la industria de videojuegos y animación, aportando creatividad y técnica para crear entornos y props visualmente atractivos. Estoy siempre dispuesto a aprender y mejorar, buscando contribuir a proyectos innovadores y de alta calidad.") {
+    if (textElement.innerHTML === "Hola! 👋 Mi nombre es ANDRES SOLA ARRONIZ y soy 3D Environment Procedural Technical Artist.<br><br>" +
+            "Soy un profesional especializado en la creación de entornos escalables y eficientes mediante técnicas procedurales, combinando arte y tecnología para resolver desafíos creativos. Mi experiencia incluye el diseño de sistemas automatizados para generación de entornos, creación de materiales procedurales con Copernicus (COPs), y optimización de flujos de trabajo usando herramientas como Houdini, Unreal Engine y Python.<br><br>" +
+            "Mi objetivo es aportar soluciones técnicas creativas en la industria de videojuegos o cine/VFX, potenciando la creación de mundos virtuales dinámicos y eficaces. Combino mi pasión por el arte 3D con un enfoque metódico, buscando siempre aprender nuevas herramientas y mejorar procesos.") {
 
-        textElement.innerHTML = "Hi!👋 My name is ANDRES SOLA ARRONIZ, and I am a JUNIOR 3D Artist specializing in Environments and Props.<br><br>" +
-            "I am passionate about 3D creation, with skills in 3D modeling, texturing, lighting, and rendering, using software such as Maya and Substance Painter. I have worked on several collaborative projects as a 3D generalist, excelling in prop creation.<br><br>" +
-            "My goal is to continue growing in the video game and animation industry, bringing creativity and technique to create visually appealing environments and props. I am always willing to learn and improve, aiming to contribute to innovative and high-quality projects.";
+        textElement.innerHTML = "Hi! 👋 My name is ANDRES SOLA ARRONIZ, and I am a 3D Environment Procedural Technical Artist.<br><br>" +
+            "I am a professional specialized in creating scalable and efficient environments through procedural techniques, bridging art and technology to solve creative challenges. My experience includes designing automated systems for environment generation, developing procedural materials using Copernicus (COPs), and optimizing workflows with tools like Houdini, Unreal Engine, and Python.<br><br>" +
+            "My goal is to deliver creative technical solutions in the video game or film/VFX industries, enhancing the creation of dynamic and impactful virtual worlds. I combine my passion for 3D art with a methodical approach, always seeking to learn new tools and refine processes.";
         button.innerText = "EUS";
 
 
-    } else if (textElement.innerHTML === "Hi!👋 My name is ANDRES SOLA ARRONIZ, and I am a JUNIOR 3D Artist specializing in Environments and Props.<br><br>" +
-            "I am passionate about 3D creation, with skills in 3D modeling, texturing, lighting, and rendering, using software such as Maya and Substance Painter. I have worked on several collaborative projects as a 3D generalist, excelling in prop creation.<br><br>" +
-            "My goal is to continue growing in the video game and animation industry, bringing creativity and technique to create visually appealing environments and props. I am always willing to learn and improve, aiming to contribute to innovative and high-quality projects." ) {
+    } else if (textElement.innerHTML === "Hi! 👋 My name is ANDRES SOLA ARRONIZ, and I am a 3D Environment Procedural Technical Artist.<br><br>" +
+            "I am a professional specialized in creating scalable and efficient environments through procedural techniques, bridging art and technology to solve creative challenges. My experience includes designing automated systems for environment generation, developing procedural materials using Copernicus (COPs), and optimizing workflows with tools like Houdini, Unreal Engine, and Python.<br><br>" +
+            "My goal is to deliver creative technical solutions in the video game or film/VFX industries, enhancing the creation of dynamic and impactful virtual worlds. I combine my passion for 3D art with a methodical approach, always seeking to learn new tools and refine processes." ) {
 
-      textElement.innerHTML = "Kaixo!👋, nire izena ANDRES SOLA ARRONIZ da eta Entorno eta Props 3D ARTISTA JUNIOR naiz.<br><br>" +
-            "3D sorkuntzan amorratua naiz, eta 3D modelatzean, testuratzean, argiztapenean eta errepresentazioan trebetasunak ditut, Maya eta Substance Painter bezalako softwareak erabiliz. Proiektu kolaboratibo batzuetan lan egin dut 3D Generalista bezala, propsen sorkuntzan nabarmenduz.<br><br>" +
-            "Nire helburua bideo-jokoen eta animazioaren industrian sartzen jarraitzea da, sormen eta teknika ekarriz ingurune eta props bisualki erakargarriak sortzeko. Beti prest nago ikasteko eta hobetzeko, proiektu berrietan eta kalitate handikoetan laguntzeko prest.";
+      textElement.innerHTML = "Kaixo! 👋 Nire izena ANDRES SOLA ARRONIZ da eta 3D Ingurune Prozeduraletako Artist Teknikoa naiz.<br><br>" +
+            "Eskalagarriak eta eraginkorrak diren inguruneak sortzen espezializatutako profesionala naiz, prozedura-teknika erabiliz, artea eta teknologia uztartuz erronka sortzaileak ebazteko. Nire esperientziak inguruneen generaziorako sistema automatizatuak diseinatzea, Copernicus (COPs) erabiliz material prozeduralak sortzea, eta Houdini, Unreal Engine eta Python bezalako tresnak erabiliz lan-fluxuak optimizatzea barne hartzen ditu.<br><br>" +
+            "Bideojokoetako edo zinemako/VFX industrietan ebazpen tekniko sortzaileak eskaintzea da nire helburua, mundu birtual dinamiko eta eraginkorrak indartzeko. 3D artearekiko duten grina ikuspegi metodiko batekin uztartzen dut, tresna berriak ikasi (adibidez, simulazio-tresnak) eta prozesuak hobetzeko etengabeko borondatea erakutsiz.";
         button.innerText = "ESP";
 
       } else {
-        textElement.innerHTML = "Hola!👋, mi nombre es ANDRES SOLA ARRONIZ y soy Artista 3D JUNIOR de Entornos y Props.<br><br>" +
-            "Soy un apasionado del la creación 3D con habilidades en modelado 3D, texturizado, iluminación y renderizado, utilizando software como Maya y Substance Painter. He trabajado en varios proyectos colaborativos como generalista 3D destacándome en la creación de props.<br><br>" +
-            "Mi objetivo es seguir creciendo en la industria de videojuegos y animación, aportando creatividad y técnica para crear entornos y props visualmente atractivos. Estoy siempre dispuesto a aprender y mejorar, buscando contribuir a proyectos innovadores y de alta calidad.";
+        textElement.innerHTML = "Hola! 👋 Mi nombre es ANDRES SOLA ARRONIZ y soy 3D Environment Procedural Technical Artist.<br><br>" +
+            "Soy un profesional especializado en la creación de entornos escalables y eficientes mediante técnicas procedurales, combinando arte y tecnología para resolver desafíos creativos. Mi experiencia incluye el diseño de sistemas automatizados para generación de entornos, creación de materiales procedurales con Copernicus (COPs), y optimización de flujos de trabajo usando herramientas como Houdini, Unreal Engine y Python.<br><br>" +
+            "Mi objetivo es aportar soluciones técnicas creativas en la industria de videojuegos o cine/VFX, potenciando la creación de mundos virtuales dinámicos y eficaces. Combino mi pasión por el arte 3D con un enfoque metódico, buscando siempre aprender nuevas herramientas y mejorar procesos.";
         button.innerHTML = "ING";
     }
 });
