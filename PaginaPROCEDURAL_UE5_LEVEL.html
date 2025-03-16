@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PROCEDURAL_UE5_LEVEL</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <div class="Titiulo_Artwork">
+    <div></div>
+    <h1>PROCEDURAL_UE5_LEVEL</h1>
+    <div class="like-container">
+      <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+      <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+      <p id="like-count" >0</p>
+    </div>
+  </div>
+  <section class="Contenido_Programas">
+    <h2>This artwork was created Procedurally with Houdini and Unreal Engine in the Masters Degree in Techart and Houdini for Videogames by TECHART WORLDS. I have created a procedural process to convert a simple image generated in Photoshop into a fully playable level in Unreal Engine 5. During the process, I created a point cloud where I instantiated assets in Unreal.</h2>
+    </section>
+    <section class="Contenido_Programas">
+      <div class="Programa_8"></div>
+      <div class="Programa_5"></div>
+   </section>
+ </section>
+ 
+ </section>
+
+     <section class="Contenido_Grupo">
+      <h3>PROCESS</h3>
+
+      <ul class="GR_Artkork_Standar">
+
+        <img src="CSS/Imagenes/M4Process_00.png" alt="Imagen 1" class="clickable-image">
+
+        <section class="Contenido_Grupo">
+          <h3>IN-GAME</h3>
+    
+         <ul class="GR_Artkork_Standar">
+          <video class="Artwork_Video" controls loop autoplay alt="Imagen 1">
+           <source src="CSS/Videos/UE5_M4_HeightFields - InGame.mp4" type="video/mp4"></video>
+        </ul>
+      </section>
+
+        <img src="CSS/Imagenes/M4Process_01.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_02.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_03.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_04.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_05.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_06.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_07.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_08.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_09.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_10.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_11.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_12.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_13.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_14.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_15.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/M4Process_16.png" alt="Imagen 1" class="clickable-image">
+  
+      </ul>
+     </section>
+  
+  </section >
+
+      <div id="overlay"></div>
+    </section >
+
+    <section class="Contenido_Grupo">
+  
+      <h4>More proyects:
+        <a href="index.html">Andres Sola.com</a>
+      </h4>
+
+    </section>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+    </section>
+
+    <script>
+      // Ampliar la imagen clickada
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    // Sistema de likes
+    const pageId = 'PaginaAsteroid_Belt'; // Identificador único para esta página
+    
+    let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+    let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+    
+    document.getElementById('like-count').innerText = likeCount.toString();
+    const likeButton = document.getElementById('like-button');
+    const resetButton = document.getElementById('reset-button');
+    
+    if (liked) {
+        likeButton.classList.add('liked');
+    }
+    
+    function handleLike() {
+        if (!liked) {
+            likeCount++;
+            liked = true;
+            likeButton.classList.add('liked');
+        } else {
+            likeCount--;
+            liked = false;
+            likeButton.classList.remove('liked');
+        }
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    
+    function resetLikes() {
+        likeCount = 0;
+        liked = false;
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        likeButton.classList.remove('liked');
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    </script>
+</body>
+</html>

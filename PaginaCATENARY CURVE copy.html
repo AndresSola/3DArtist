@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CATENARY CURVE</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <div class="Titiulo_Artwork">
+    <div></div>
+    <h1>CATENARY CURVE</h1>
+    <div class="like-container">
+      <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+      <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+      <p id="like-count" >0</p>
+    </div>
+  </div>
+  <section class="Contenido_Programas">
+    <h2>Today, I dedicated myself to recreating reality and creating a catenary curve in Houdini using VEX. As a technical artist, I have broken down the mathematical process to explain step by step how to create a catenary.</h2>
+    </section>
+    <section class="Contenido_Programas">
+      <div class="Programa_8"></div>
+      <div class="Programa_5"></div>
+   </section>
+ </section>
+ 
+ </section>
+
+     <section class="Contenido_Grupo">
+      <h3>PROCESS</h3>
+
+      <ul class="GR_Artkork_Standar">
+
+        <img src="CSS/Imagenes/Catenary_00.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_01.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_02.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_03.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_04.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_05.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_06.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_07.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Catenary_08.png" alt="Imagen 1" class="clickable-image">
+  
+      </ul>
+     </section>
+     
+     <section class="Contenido_Grupo">
+      <h3>ASTEROIDS</h3>
+
+     <ul class="GR_Artkork_Standar">
+   
+      <video class="Artwork_Video" controls loop autoplay alt="Imagen 1">
+       <source src="CSS/Videos/Catenary.mp4" type="video/mp4"></video>
+   
+    </ul>
+  </section>
+
+  </section >
+
+      <div id="overlay"></div>
+    </section >
+
+    <section class="Contenido_Grupo">
+  
+      <h4>More proyects:
+        <a href="index.html">Andres Sola.com</a>
+      </h4>
+
+    </section>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+    </section>
+
+    <script>
+      // Ampliar la imagen clickada
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    // Sistema de likes
+    const pageId = 'PaginaAsteroid_Belt'; // Identificador único para esta página
+    
+    let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+    let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+    
+    document.getElementById('like-count').innerText = likeCount.toString();
+    const likeButton = document.getElementById('like-button');
+    const resetButton = document.getElementById('reset-button');
+    
+    if (liked) {
+        likeButton.classList.add('liked');
+    }
+    
+    function handleLike() {
+        if (!liked) {
+            likeCount++;
+            liked = true;
+            likeButton.classList.add('liked');
+        } else {
+            likeCount--;
+            liked = false;
+            likeButton.classList.remove('liked');
+        }
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    
+    function resetLikes() {
+        likeCount = 0;
+        liked = false;
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        likeButton.classList.remove('liked');
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    </script>
+</body>
+</html>
