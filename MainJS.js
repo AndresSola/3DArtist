@@ -41,17 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Dowload buton
+// Download button
 document.getElementById('downloadBtn').addEventListener('click', function() {
   const link = document.createElement('a');
-  link.href = 'http://127.0.0.1:5500/WEB\CSS\CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf'; // Ruta al archivo PDF
+  link.href = 'https://raw.githubusercontent.com/AndresSola/3DArtist/main/CSS/CV ANDRES SOLA in.pdf'; // Enlace corregido
   link.download = 'CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 });
-
-
 // ETIQUETAS
 document.addEventListener('DOMContentLoaded', function() {
     const botones = document.querySelectorAll('.boton');
