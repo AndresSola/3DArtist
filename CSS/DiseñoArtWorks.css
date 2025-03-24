@@ -259,4 +259,49 @@ img {
     .GR_Artwork_Standar{
         grid-template-columns: 1fr;
     } 
-}   
+} 
+.submit_butonsCV{
+    background-color: #282828;
+    color: #919191;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    border: 2px solid;
+    border-radius: 50px;
+    border-color: #919191;
+    filter: saturate(100%);
+    transition: 200ms;
+}
+.submit_butons1:hover, .submit_butons2:hover, .submit_butons3:hover, .submit_butons4:hover, .submit_butons5:hover, .submit_butons6:hover ,.submit_butons7:hover ,.submit_butons8:hover ,.submit_butons9:hover{
+    cursor: pointer;
+    scale: 106%;
+    transition: 200ms;
+    border-color: #27b327;
+    filter: saturate(120%);
+}
+.submit_butonsCV:hover{
+    background-color: #3a3a3a;
+    color: #27b327;
+    font-size: 20px;
+    text-align: center;
+    border-color: #27b327;
+    cursor: pointer;
+    scale: 108%;
+    transition: 0.1s;
+    filter: saturate(90%);
+    transition: 200ms;
+}
+.Download{
+    background-image: url(Logos/Dowload.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    width: 36px;
+    height: 36px;
+}

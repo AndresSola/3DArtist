@@ -334,7 +334,7 @@ function myFunction() {
 }
 
 
-// Inicializar contadores de likes
+/* Inicializar contadores de likes
 var likeCounts = [0, 0, 0];
         var likedStatus = [false, false, false];
 
@@ -377,7 +377,7 @@ var likeCounts = [0, 0, 0];
         document.getElementById('likeButton3').addEventListener('click', function() {
             addLike(2);
         });
-        
+*/        
 
 
 

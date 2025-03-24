@@ -14,7 +14,10 @@
 
   <section class="Contenido_Grupo">
     <div class="Titiulo_Artwork">
-    <div></div>
+      <button class="submit_butonsCV" id="downloadBtn">
+        <h4>FBX_EXPORTER</h4>
+        <div class="Download" id="downloadBtn"></div>
+      </button>
     <h1>FBX EXPORTER</h1>
     <div class="like-container">
       <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
@@ -141,6 +144,60 @@
         likeButton.classList.remove('liked');
         resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
     }
+
+
+    // Download button
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  const link = document.createElement('a');
+  link.href = 'https://raw.githubusercontent.com/AndresSola/3DArtist/main/CSS/AS_Exporter.1.0.hdanc'; // Enlace corregido
+  link.download = 'CURRICULUM_VITAE_ANDRES_SOLA_2024.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+// ETIQUETAS
+document.addEventListener('DOMContentLoaded', function() {
+    const botones = document.querySelectorAll('.boton');
+    const tags = document.querySelectorAll('.tag');
+
+    botones.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const botonActual = this;
+            const idBotonActual = botonActual.id;
+
+            if (botonActual.classList.contains('EtiquetaVideogameSelected')) {
+                botonActual.classList.remove('EtiquetaVideogameSelected');
+                tags.forEach(tag => {
+                    if (tag.getAttribute('data-boton').includes(idBotonActual)) {
+                        tag.classList.remove('EtiquetaVideogameSelected');
+                    }
+                });
+            } else {
+                botonActual.classList.add('EtiquetaVideogameSelected');
+                tags.forEach(tag => {
+                    const dataBoton = tag.getAttribute('data-boton').split(' ');
+                    if (dataBoton.includes(idBotonActual)) {
+                        tag.classList.add('EtiquetaVideogameSelected');
+                    }
+                });
+            }
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.boton')) {
+            botones.forEach(boton => {
+                boton.classList.remove('EtiquetaVideogameSelected');
+            });
+            tags.forEach(tag => {
+                tag.classList.remove('EtiquetaVideogameSelected');
+            });
+        }
+    });
+});
+
     </script>
 </body>
 </html>
