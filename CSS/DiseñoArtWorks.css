@@ -57,7 +57,7 @@ body {
     margin: 10px auto ;
     gap: 20px;
 }
-.Programa_1, .Programa_2, .Programa_3, .Programa_4,.Programa_5,.Programa_6,.Programa_7,.Programa_8{
+.Programa_1, .Programa_2, .Programa_3, .Programa_4,.Programa_5,.Programa_6,.Programa_7,.Programa_8, .Programa_9{
     background-position: center;
     background-repeat: none;
     background-size: 100%;
@@ -96,6 +96,9 @@ body {
 }
 .Programa_8{
     background-image: url(Logos/Houdini.png);
+}
+.Programa_9{
+    background-image: url(Logos/Python.png);
 }
 
 h1{
