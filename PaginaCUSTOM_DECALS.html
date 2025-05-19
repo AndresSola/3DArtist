@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CUSTOM_DECALS</title>
+   <link rel="website icon" type="png" href="Imagenes/Andres Sola.jpg">
+   <link href="CSS/DiseñoArtWorks.css" rel="stylesheet">
+</head>
+<body>
+   <section class="Alerta_WIP">
+    Warning: This website is in progress
+  </section>
+
+  <section class="Contenido_Grupo">
+    <div class="Titiulo_Artwork">
+      <button class="submit_butonsCV" id="downloadBtn">
+        <h4>CUSTOM_DECALS</h4>
+        <div class="Download" id="downloadBtn"></div>
+      </button>
+    <h1>CUSTOM_DECALS</h1>
+    <div class="like-container">
+      <button id="like-button" class="Like_Button" onclick="handleLike()"></button>
+      <button id="reset-button" onclick="resetLikes()" hidden>🔄 Reset</button>
+      <p id="like-count" >0</p>
+    </div>
+  </div>
+  <section class="Contenido_Programas">
+    <h2>Today I'm excited to share my new tool created with hashtag#VEX in hashtag#Houdini: a hashtag#Procedural Custom hashtag#Decal Generator! 
+
+This hashtag#tool is designed to hashtag#optimize the workflow within a hashtag#3D game development studio hashtag#pipeline.
+
+Using a very simple logic based on hashtag#booleans, I managed to extract fully procedural decals from any model!
+
+The hashtag#HDA approach allows for complete versatility, transforming a hashtag#textureatlas into a complex hashtag#scattering-based randomization hashtag#system.</h2>
+    </section>
+    <section class="Contenido_Programas">
+      <div class="Programa_8"></div>
+      <div class="Programa_5"></div>
+   </section>
+ </section>
+ 
+ </section>
+    <section class="Contenido_Grupo">
+        <h3>HDA in Engine</h3>
+    <ul class="GR_Artkork_Standar">
+    <video class="Artwork_Video" controls loop autoplay alt="Imagen 1">
+    <source src="CSS/Videos/DecalsDeco.mp4" type="video/mp4"></video>
+    </ul>
+    </section>
+
+     <section class="Contenido_Grupo">
+      <h3>TOOL</h3>
+
+      <ul class="GR_Artkork_Standar">
+
+        <img src="CSS/Imagenes/Decals02.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Decals00.png" alt="Imagen 1" class="clickable-image">
+        <img src="CSS/Imagenes/Decals01.png" alt="Imagen 1" class="clickable-image">
+      </ul>
+     </section>
+  </section >
+
+      <div id="overlay"></div>
+    </section >
+
+    <section class="Contenido_Grupo">
+  
+      <h4>More proyects:
+        <a href="index.html">Andres Sola.com</a>
+      </h4>
+
+    </section>
+
+    <section class="Contenido_Programas">
+      <h2>Artwork made by Andrés Sola Arróniz</h2>
+      <img src="CSS/Imagenes/Andres Sola.jpg" class="AS">
+    </section>
+
+    <script>
+      // Ampliar la imagen clickada
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.clickable-image');
+        const overlay = document.getElementById('overlay');
+    
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const clone = image.cloneNode();
+                overlay.innerHTML = '';
+                overlay.appendChild(clone);
+                overlay.style.display = 'flex';
+            });
+        });
+    
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    });
+    
+    // Sistema de likes
+    const pageId = 'PaginaAsteroid_Belt'; // Identificador único para esta página
+    
+    let likeCount = localStorage.getItem(`likeCount_${pageId}`) ? parseInt(localStorage.getItem(`likeCount_${pageId}`)) : 0;
+    let liked = localStorage.getItem(`liked_${pageId}`) === 'true';
+    
+    document.getElementById('like-count').innerText = likeCount.toString();
+    const likeButton = document.getElementById('like-button');
+    const resetButton = document.getElementById('reset-button');
+    
+    if (liked) {
+        likeButton.classList.add('liked');
+    }
+    
+    function handleLike() {
+        if (!liked) {
+            likeCount++;
+            liked = true;
+            likeButton.classList.add('liked');
+        } else {
+            likeCount--;
+            liked = false;
+            likeButton.classList.remove('liked');
+        }
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+    
+    function resetLikes() {
+        likeCount = 0;
+        liked = false;
+        localStorage.setItem(`likeCount_${pageId}`, likeCount);
+        localStorage.setItem(`liked_${pageId}`, liked);
+        document.getElementById('like-count').innerText = likeCount.toString();
+        likeButton.classList.remove('liked');
+        resetButton.hidden = true; // Asegurar que el botón de reset permanezca oculto
+    }
+
+
+    // Download button
+document.getElementById('downloadBtn').addEventListener('click', function() {
+const link = document.createElement('a');
+link.href = 'https://raw.githubusercontent.com/AndresSola/3DArtist/main/CSS/AS_HDA_Decal_Placer.hdanc'; // Enlace corregido
+link.download = 'AS_HDA_Decal_Placer.hdanc';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+});
+// ETIQUETAS
+document.addEventListener('DOMContentLoaded', function() {
+    const botones = document.querySelectorAll('.boton');
+    const tags = document.querySelectorAll('.tag');
+
+    botones.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const botonActual = this;
+            const idBotonActual = botonActual.id;
+
+            if (botonActual.classList.contains('EtiquetaVideogameSelected')) {
+                botonActual.classList.remove('EtiquetaVideogameSelected');
+                tags.forEach(tag => {
+                    if (tag.getAttribute('data-boton').includes(idBotonActual)) {
+                        tag.classList.remove('EtiquetaVideogameSelected');
+                    }
+                });
+            } else {
+                botonActual.classList.add('EtiquetaVideogameSelected');
+                tags.forEach(tag => {
+                    const dataBoton = tag.getAttribute('data-boton').split(' ');
+                    if (dataBoton.includes(idBotonActual)) {
+                        tag.classList.add('EtiquetaVideogameSelected');
+                    }
+                });
+            }
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.boton')) {
+            botones.forEach(boton => {
+                boton.classList.remove('EtiquetaVideogameSelected');
+            });
+            tags.forEach(tag => {
+                tag.classList.remove('EtiquetaVideogameSelected');
+            });
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
