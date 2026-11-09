@@ -768,7 +768,7 @@ img{
     background-color: rgb(212, 212, 14);
 }
 .hr_Blanco{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 254);
 }
 .hr_Morado{
     background-color: rgb(131, 21, 221);
@@ -830,9 +830,9 @@ img{
     pointer-events: none;
 }
 .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9, .ENV_artwork_10, .ENV_artwork_11, .ENV_artwork_12,
-.PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12,
+.PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, .PRO_artwork_13,
 .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3,
-.TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9, .TOL_artwork_10 {
+.TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9, .TOL_artwork_10, .TOL_artwork_11, .TOL_artwork_12 {
     color: rgba(252, 0, 0, 0);
     background-size: 111%;
     background-repeat: no-repeat;
@@ -878,6 +878,12 @@ img{
 .TOL_artwork_10 {
     background-image: url(Miniaturas/mini\ Atlas\ generator.png)
 }
+.TOL_artwork_11 {
+    background-image: url(Miniaturas/NodePreset\ mini.png)
+}
+.TOL_artwork_12 {
+    background-image: url(Miniaturas/Occlusion\ Culling\ mini.png)
+}   
 .ENV_artwork_1 {
     background-image: url(Miniaturas/mini\ Engine\ Room.jpg);
 }
@@ -950,6 +956,9 @@ img{
 .PRO_artwork_12 {
     background-image: url(Miniaturas/mini\ Rifle.jpg);
 }
+.PRO_artwork_13 {
+    background-image: url(Miniaturas/Fatal_Juice.png);
+}
 .CHA_artwork_1{
     background-image: url(Miniaturas/mini\ Zombie.png);
 }
@@ -960,9 +969,9 @@ img{
     background-image: url(Miniaturas/mini\ TFG\ ELOR.jpg);
 }
 .ENV_artwork_1:hover, .ENV_artwork_2:hover, .ENV_artwork_3:hover, .ENV_artwork_4:hover, .ENV_artwork_5:hover, .ENV_artwork_6:hover, .ENV_artwork_7:hover, .ENV_artwork_8:hover, .ENV_artwork_9:hover, .ENV_artwork_10:hover, .ENV_artwork_11:hover, .ENV_artwork_12:hover,
-.PRO_artwork_1:hover, .PRO_artwork_2:hover, .PRO_artwork_3:hover, .PRO_artwork_4:hover, .PRO_artwork_5:hover, .PRO_artwork_6:hover, .PRO_artwork_7:hover, .PRO_artwork_8:hover,.PRO_artwork_9:hover,.PRO_artwork_10:hover,.PRO_artwork_11:hover, .PRO_artwork_12:hover,
+.PRO_artwork_1:hover, .PRO_artwork_2:hover, .PRO_artwork_3:hover, .PRO_artwork_4:hover, .PRO_artwork_5:hover, .PRO_artwork_6:hover, .PRO_artwork_7:hover, .PRO_artwork_8:hover,.PRO_artwork_9:hover,.PRO_artwork_10:hover,.PRO_artwork_11:hover, .PRO_artwork_12:hover, .PRO_artwork_13:hover,
 .CHA_artwork_1:hover, .CHA_artwork_2:hover, .CHA_artwork_3:hover,
-.TOL_artwork_1:hover, .TOL_artwork_2:hover, .TOL_artwork_3:hover, .TOL_artwork_4:hover, .TOL_artwork_5:hover, .TOL_artwork_6:hover, .TOL_artwork_7:hover, .TOL_artwork_8:hover, .TOL_artwork_9:hover, .TOL_artwork_10:hover {
+.TOL_artwork_1:hover, .TOL_artwork_2:hover, .TOL_artwork_3:hover, .TOL_artwork_4:hover, .TOL_artwork_5:hover, .TOL_artwork_6:hover, .TOL_artwork_7:hover, .TOL_artwork_8:hover, .TOL_artwork_9:hover, .TOL_artwork_10:hover, .TOL_artwork_11:hover, .TOL_artwork_12:hover {
     color: rgba(255, 255, 255, 0.9);  
     box-shadow:0px 0px 10px rgba(0, 0, 0, 0.7);
     scale: 106%;
@@ -1139,9 +1148,9 @@ img{
         width: 90%;
     } 
     .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9, .ENV_artwork_10, .ENV_artwork_11, .ENV_artwork_12,
-    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, 
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, .PRO_artwork_13, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3,
-    .TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9, .TOL_artwork_10 {   
+    .TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9, .TOL_artwork_10, .TOL_artwork_11, .TOL_artwork_12 {   
     width: 13vw;
     max-width: 250px;
     min-width: 200px;
@@ -1205,9 +1214,9 @@ img{
       padding: 20px;
     }
     .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9, .ENV_artwork_10, .ENV_artwork_11, .ENV_artwork_12,
-    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, 
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, .PRO_artwork_13, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3,
-    .TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9{   
+    .TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9, .TOL_artwork_10, .TOL_artwork_11, .TOL_artwork_12{   
     width: 17vw;
     min-width: 260px;
     height: 17vw;
@@ -1294,9 +1303,9 @@ img{
         filter: saturate(20%);
     }
     .ENV_artwork_1, .ENV_artwork_2, .ENV_artwork_3, .ENV_artwork_4, .ENV_artwork_5, .ENV_artwork_6, .ENV_artwork_7, .ENV_artwork_8, .ENV_artwork_9, .ENV_artwork_10, .ENV_artwork_11, .ENV_artwork_12,
-    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, 
+    .PRO_artwork_1, .PRO_artwork_2, .PRO_artwork_3, .PRO_artwork_4, .PRO_artwork_5, .PRO_artwork_6,.PRO_artwork_7, .PRO_artwork_8, .PRO_artwork_9, .PRO_artwork_10, .PRO_artwork_11, .PRO_artwork_12, .PRO_artwork_13, 
     .CHA_artwork_1, .CHA_artwork_2, .CHA_artwork_3,
-    .TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9{   
+    .TOL_artwork_1, .TOL_artwork_2, .TOL_artwork_3, .TOL_artwork_4, .TOL_artwork_5, .TOL_artwork_6, .TOL_artwork_7, .TOL_artwork_8, .TOL_artwork_9, .TOL_artwork_10, .TOL_artwork_11, .TOL_artwork_12{   
     width: 13vw;
     min-width: 290px;
     height: 13vw;
@@ -1327,3 +1336,22 @@ img{
 
 
 
+
+/* Respetar el atributo hidden en elementos con display propio */
+.Li_Languages[hidden],
+.EtiquetaVideogame[hidden],
+.GR_Etiquetas_Colabo[hidden] {
+    display: none;
+}
+
+/* Subtítulo bajo el nombre principal */
+.Nombre_Principal {
+    margin-bottom: 0px;
+}
+.Subtitulo_Nombre {
+    font-size: 16px;
+    color: #9a9a9a;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 4px 0px 20px 0px;
+}
